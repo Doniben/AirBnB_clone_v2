@@ -10,7 +10,7 @@ import os
 def do_pack():
     """ function that returns an archive path """
     try:
-        if not os.path.exist("versions"):
+        if not os.path.exists("versions"):
             local("mkdir versions")
         date = datetime.now()
         date = date.strftime("%Y%m%d%H%M%S")
