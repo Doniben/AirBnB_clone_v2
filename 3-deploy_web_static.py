@@ -41,6 +41,7 @@ def do_deploy(archive_path):
         spaces = file_name.replace('.', ' ')
         without_ext = spaces.split(' ')
         ext_out = with_ext[-2]
+
         run('mkdir -p /data/web_static/releases/{}'.format(ext_out))
         run('tar -xzf /tmp/{} -C {}{}/'.format(file_name, path, ext_out))
         run('rm /tmp/{}'.format(file_name))
@@ -48,11 +49,9 @@ def do_deploy(archive_path):
         run('rm -rf {}{}/web_static'.format(path, without_ext1))
         run('rm -rf /data/web_static/current')
         run('ln -s {}{}/ /data/web_static/current'.format(path, ext_out))
-        print("New version deployed!")
         return True
     except:
         return False
-
 
 def deploy():
     path = do_pack()
