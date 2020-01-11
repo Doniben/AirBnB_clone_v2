@@ -54,7 +54,8 @@ def do_deploy(archive_path):
         return False
 
 
-    def deploy():
+def deploy():
+    """ deploy """
     path = do_pack()
     if not path:
         return False
