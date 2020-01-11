@@ -8,11 +8,7 @@ from fabric.api import *
 import os
 from shlex import split
 
-env.host = [
-    '35.231.181.131',
-    '35.227.25.5'
-    ]
-
+env.host = ['35.231.181.131', '35.227.25.5']
 env.user = "ubuntu"
 
 
