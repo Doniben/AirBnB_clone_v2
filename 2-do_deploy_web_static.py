@@ -4,7 +4,6 @@ your web servers, using the function do_deploy """
 
 import os
 from fabric.api import *
-from datetime import datetime
 from shlex import split
 
 env.host = [
