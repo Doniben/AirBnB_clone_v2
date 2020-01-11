@@ -25,7 +25,7 @@ def do_deploy(archive_path):
     try:
         path = "/data/web_static/releases/"
         file_name = os.path.basename(archive_path)
-        put('file_name', '/tmp/{}'.format(file_name))
+        put(file_name, '/tmp/{}'.format(file_name))
         spaces = file_name.replace('.', ' ')
         without_ext = spaces.split(' ')
         ext_out = with_ext[-2]
