@@ -53,10 +53,11 @@ def do_deploy(archive_path):
     except:
         return False
 
-def deploy():
+
+    def deploy():
     path = do_pack()
     if not path:
         return False
-    
+
     new_path = do_deploy(path)
     return (new_path)
