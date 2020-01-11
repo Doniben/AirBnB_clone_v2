@@ -6,15 +6,9 @@ import os
 from fabric.api import *
 from shlex import split
 
-env.host = [
-    '35.231.181.131',
-    '35.227.25.5'
-    ]
+env.host = ['35.231.181.131', '35.227.25.5']
 
 env.user = "ubuntu"
-# env.use_ssh_config = True
-# env.ssh_config_path = '~/.ssh/ssh_config'
-# env.key_filename = '~/.ssh/holberton'
 
 
 def do_deploy(archive_path):
