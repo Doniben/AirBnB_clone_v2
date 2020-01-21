@@ -10,9 +10,11 @@ app = Flask("__main__")
 def home():
     return "Hello HBNB!"
 
+
 @app.route('/hbnb')
 def hbnb():
     return "HBNB"
+
 
 @app.route('/c/<text>')
 def replace_text(text):
