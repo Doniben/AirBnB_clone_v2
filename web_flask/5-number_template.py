@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/pcython3
 """ Python script that starts a Flask web application with /,
 /hbnb, /c/<text>, /python/<text>, /number/<n>/ and /number_template/<n> """
 
@@ -34,7 +34,7 @@ def number(n):
     return ("%d is a number" % n)
 
 
-app.route('number_template/<int:n>')
+@app.route('/number_template/<int:n>')
 def template(n):
     return render_template('5-number.html', n=n)
 
