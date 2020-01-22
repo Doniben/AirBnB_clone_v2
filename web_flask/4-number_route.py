@@ -28,7 +28,6 @@ def python_func(text="is cool"):
     return "Python " + text.replace("_", " ")
 
 
-@app.route('/number/')
 @app.route('/number/<int:n>')
 def number(n):
     return str(n) + " is a number"
