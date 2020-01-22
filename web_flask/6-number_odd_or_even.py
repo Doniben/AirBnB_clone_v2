@@ -23,6 +23,7 @@ def hbnb():
 def changed_text(text):
     return "C " + text.replace("_", " ")
 
+
 @app.route('/python/')
 @app.route('/python/<text>')
 def py_function(text="in cool"):
@@ -32,6 +33,7 @@ def py_function(text="in cool"):
 @app.route('/number/<int:n>')
 def number_function(n):
     return "%d is a number" % n
+
 
 @app.route('/number_template/<int:n>')
 def template_function(n):
