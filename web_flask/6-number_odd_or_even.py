@@ -9,38 +9,38 @@ from flask import render_template
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', strict_slashes=False)
 def route():
     """ home route """
     return "Hello HBNB!"
 
 
-@app.route('/hbnb')
+@app.route('/hbnb', strict_slashes=False)
 def hbnb():
     """ hbnb route """
     return "HBNB"
 
 
-@app.route('/c/<text>')
+@app.route('/c/<text>', strict_slashes=False)
 def changed_text(text):
     """ changed text """
     return "C " + text.replace("_", " ")
 
 
-@app.route('/python/')
-@app.route('/python/<text>')
+@app.route('/python/', strict_slashes=False)
+@app.route('/python/<text>', strict_slashes=False)
 def py_function(text="in cool"):
     """ python function """
     return "Python " + text.replace("_", " ")
 
 
-@app.route('/number/<int:n>')
+@app.route('/number/<int:n>', strict_slashes=False)
 def number_function(n):
     """ number function """
     return "%d is a number" % n
 
 
-@app.route('/number_template/<int:n>')
+@app.route('/number_template/<int:n>', strict_slashes=False)
 def template_function(n):
     """ template funtion """
     return render_template('5-number.html', n=n)
